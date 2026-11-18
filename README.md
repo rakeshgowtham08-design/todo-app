@@ -34,18 +34,13 @@ npm run preview
 
 ## Deploy to GitHub Pages
 
-The Vite `base: './'` setting makes built assets resolve correctly both at the root of a domain and under a GitHub Pages project path.
+This project is configured for the repository `rakeshgowtham08-design/todo-app`, with Vite's base path set to `/todo-app/`. The deployment workflow builds the app and publishes it to GitHub Pages whenever a commit is pushed to `main`.
 
-1. Create a GitHub repository and add it as this project's `origin` remote.
-2. Make sure Git is authenticated and has permission to push to that repository.
-3. Run:
+1. Push the project to the `main` branch.
+2. In the GitHub repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
+3. Open the **Actions** tab and wait for the **Deploy to GitHub Pages** workflow to finish successfully.
 
-   ```sh
-   npm install
-   npm run deploy
-   ```
-
-`npm run deploy` builds the app and publishes `dist/` to the `gh-pages` branch. In the repository's **Settings → Pages**, select **Deploy from a branch**, then choose `gh-pages` and `/(root)`. GitHub Pages will show the live URL in that settings page.
+The expected site URL is <https://rakeshgowtham08-design.github.io/todo-app/>. GitHub will show the deployment URL under **Settings → Pages** after the workflow succeeds.
 
 ## Screenshots
 
